@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星空体育 · 关于本站</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf8f5;
+            color: #2c2c2c;
+            font-family: 'Georgia', 'Noto Serif SC', 'Source Han Serif SC', serif;
+            line-height: 1.7;
+            padding: 2rem 1.2rem;
+        }
+
+        .page {
+            max-width: 780px;
+            margin: 0 auto;
+            background: #fffcf9;
+            border-radius: 24px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem 3rem;
+        }
+
+        @media (max-width: 600px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.5rem;
+            }
+        }
+
+        /* hero 区 — 轻柔叙述 */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #e6ddd0;
+            padding-bottom: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #3b322a;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #5a5149;
+            max-width: 640px;
+        }
+
+        .hero .muted {
+            display: inline-block;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: #a0968b;
+        }
+
+        /* 区块通用 */
+        section {
+            margin-bottom: 2.8rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 450;
+            color: #3b322a;
+            border-left: 4px solid #b7a690;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+        }
+
+        /* 提示框 style — 米茶底色 */
+        .notice-box {
+            background: #f4efe8;
+            border-left: 5px solid #c9b9a8;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            margin: 1.8rem 0;
+            font-size: 0.98rem;
+            color: #3f3a35;
+        }
+
+        .notice-box strong {
+            color: #3b2e22;
+        }
+
+        /* 特点卡片 — 极简文章感 */
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #fcf9f5;
+            padding: 1.2rem 1rem;
+            border-radius: 16px;
+            border: 1px solid #e8dfd4;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-item:hover {
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #3f352c;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #5f554a;
+            margin-bottom: 0;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            background: #f7f2eb;
+            border-radius: 18px;
+            padding: 1.4rem 1.6rem;
+        }
+
+        .faq-summary details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #dcd0c2;
+            padding-bottom: 0.8rem;
+        }
+
+        .faq-summary details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-summary summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #3b322a;
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .faq-summary summary::before {
+            content: "▸";
+            margin-right: 0.5rem;
+            color: #a3917e;
+            transition: transform 0.2s;
+        }
+
+        .faq-summary details[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        .faq-summary .answer {
+            margin-top: 0.5rem;
+            padding-left: 1.4rem;
+            color: #4f473f;
+            font-size: 0.95rem;
+        }
+
+        /* 底部链接 */
+        .footer-links {
+            margin-top: 2.5rem;
+            padding-top: 1.8rem;
+            border-top: 1px solid #e2d7ca;
+            font-size: 0.95rem;
+            color: #6b6056;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            align-items: baseline;
+        }
+
+        .footer-links a {
+            color: #5f4e3b;
+            text-decoration: none;
+            border-bottom: 1px dotted #b7a48e;
+        }
+
+        .footer-links a:hover {
+            border-bottom: 1px solid #5f4e3b;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e8ddd0;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区：从站点介绍与可信说明切入 -->
+    <div class="hero">
+        <h1>关于这个站点</h1>
+        <p>这里是一个以体育信息聚合与交流为初衷的个人项目。多年来慢慢整理了一些赛事回顾、队伍动态以及观察笔记，逐渐形成现在看到的模样。站点并不标榜全面或即时，更在意内容的可读与可信。</p>
+        <span class="muted">—— 记录与分享，仅此而已。</span>
+    </div>
+
+    <!-- 优势区 / 特点简述 -->
+    <section>
+        <h2>为什么可以把它当作信息来源之一</h2>
+        <p>没有算法推荐，没有信息流轰炸。每篇内容都经过人工整理、比对、润色，再放到这里。你读到的是一个人花时间筛选过的版本，而不是机器拼凑的快餐。</p>
+
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>可追溯</h3>
+                <p>大部分内容附有参考来源或数据日期，方便你进一步核实。</p>
+            </div>
+            <div class="feature-item">
+                <h3>不追逐热点</h3>
+                <p>比起第一时间发声，更愿意等事情清晰后再做整理。</p>
+            </div>
+            <div class="feature-item">
+                <h3>稳定的版式</h3>
+                <p>页面风格偏重阅读，不弹窗、不跳转，专注内容本身。</p>
+            </div>
+        </div>
+
+        <div class="notice-box">
+            <strong>一点说明：</strong> 本站不属于任何机构或商业团队，只是一个长期兴趣驱动的记录角落。所有信息仅供参考，不构成任何形式的建议或保证。
+        </div>
+    </section>
+
+    <!-- 说明区：站点介绍与可信说明 + 自然嵌入链接 -->
+    <section>
+        <h2>这个站点与「星空体育」</h2>
+        <p>
+            如果你在寻找一个风格偏向传统、不浮躁的体育信息页面，或许可以花几分钟浏览一下
+            <a href="https://pages-xingkong.com">星空体育</a>。
+            这里的文章更新节奏不快，但每一篇都经过重新梳理。你可能会发现一些比赛复盘、赛季回顾，或是某个球队的板凳深度分析——没有标题党，只有平实的叙述。
+        </p>
+        <p>
+            同时，我也建议你用自己习惯的方式交叉验证任何数据。毕竟体育的魅力有一部分就在于它的不确定性和众说纷纭，而我的整理只是其中一种视角。
+        </p>
+    </section>
+
+    <!-- 再加一个场景 / 使用提示 -->
+    <section>
+        <h2>适合怎样翻阅</h2>
+        <p>不需要每天都来。可以把这里当作一个安静的体育笔记本，想起的时候点开看看最近有没有更新。或者，当你对某场比赛、某个转会期有些模糊记忆时，来翻翻旧文或许能帮你回忆起当时的脉络。</p>
+        <div class="notice-box" style="background: #f1ebe2;">
+            <strong>一个小建议：</strong> 手机端阅读时横屏或使用稍大字号会更舒服。本站没有做复杂的移动端适配，但胜在简洁，加载快。
+        </div>
+    </section>
+
+    <!-- FAQ 摘要 —— 三个最常见的问题 -->
+    <section>
+        <h2>常见疑问 · 摘要</h2>
+        <div class="faq-summary">
+            <details>
+                <summary>内容更新频率如何？</summary>
+                <div class="answer">没有固定周期。少则一周两三篇，多则可能半个月没有新内容。全凭个人时间和精力。</div>
+            </details>
+            <details>
+                <summary>数据来源可靠吗？</summary>
+                <div class="answer">主要来自赛事官网、联赛统计页面以及一些长期跟踪体育数据的第三方站点。我会尽量注明来源，但难免有个别疏漏。</div>
+            </details>
+            <details>
+                <summary>可以转载或引用这里的文章吗？</summary>
+                <div class="answer">非商业用途欢迎引用，注明出处即可。如果是商业平台或付费内容使用，请先联系协商。</div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 底部链接 —— 再次自然出现星空体育链接 -->
+    <div class="footer-links">
+        <span>主站：<a href="https://pages-xingkong.com">星空体育</a></span>
+        <span>· 内容仅代表个人整理 · 最后更新 2025</span>
+    </div>
+</div>
+</body>
+</html>
